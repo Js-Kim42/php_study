@@ -36,7 +36,7 @@
 </head>
 <body>
 <div class="list-container">
-    <h1>코로나 뉴스</h1>
+    <h1>코로나 뉴스 수정!!</h1>
     <ul id="list">
         <li class="list-item"><a href="#">코로나 뉴스 첫번째</li>
         <li class="list-item">코로나 뉴스 두번째</li>
