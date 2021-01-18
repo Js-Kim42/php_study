@@ -1,3 +1,14 @@
+<?php
+$conn = mysqli_connect(
+    '13.209.8.36',
+    'root',
+    '',
+    'study'
+);
+
+$sql = "select * from news";
+$result = mysqli_query($conn, $sql);
+?>
 <html>
 <head>
     <title>Corona News</title>
@@ -38,9 +49,13 @@
 <div class="list-container">
     <h1>코로나 뉴스 수정!!</h1>
     <ul id="list">
-        <li class="list-item"><a href="#">코로나 뉴스 첫번째</li>
-        <li class="list-item">코로나 뉴스 두번째</li>
-        <li class="list-item">코로나 뉴스 세번째</li>
+        <?php
+            while($row = mysqli_fetch_array($result)) {
+        ?>
+        <li class="list-item"><a href="<?php echo $row['link'] ?>"><?php echo $row['title'] ?></a></li>
+        <?php
+         }
+        ?>
     </ul>
 </div>
 </body>
